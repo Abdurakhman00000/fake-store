@@ -1,0 +1,394 @@
+.ItemDetails {
+    .content {
+        margin-top: 210px;
+
+        .item_det_content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+
+            img {
+                width: 400px;
+                height: 350px;
+                object-fit: cover;
+            }
+
+            .item_det_text {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                h1 {
+                    font-size: 25px;
+                    font-weight: 600;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                }
+
+                span {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: rgb(0, 255, 102);
+                }
+
+                h3 {
+                    font-size: 24px;
+                    font-weight: 400;
+                }
+
+                p {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: rgba(0, 0, 0, 0.96);
+                }
+
+                .item_color {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    h3 {
+                        font-size: 20px;
+                        font-weight: 400;
+                    }
+
+                    p {
+                        font-size: 18px;
+                        font-weight: 400;
+                        color: rgba(0, 0, 0, 0.684);
+                    }
+                }
+
+                .item_size {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    h3 {
+                        font-size: 20px;
+                        font-weight: 400;
+                    }
+
+                    p {
+                        margin-top: 2px;
+                        font-size: 18px;
+                        font-weight: 400;
+                        color: rgba(0, 0, 0, 0.684);
+                    }
+
+                }
+
+                .item_buy_block {
+                    display: flex;
+                    align-items: center;
+                    gap: 13px;
+
+                    .item_count {
+                        display: flex;
+                        align-items: center;
+                        gap: 13px;
+
+                        button {
+                            width: 30px;
+                            height: 30px;
+                            background: transparent;
+                            border: none;
+                            border: 1px solid rgba(0, 0, 0, 0.662);
+                            border-radius: 5px;
+                            font-size: 22px;
+                        }
+
+                        p {
+                            font-size: 17px;
+                        }
+                    }
+
+                    .item_buy_btn {
+                        button {
+                            height: 30px;
+                            width: 120px;
+                            border: none;
+                            border-radius: 5px;
+                            background: rgb(219, 68, 68);
+                            color: white;
+                        }
+                    }
+                }
+
+                .main_delivery {
+                    margin: 18px 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .box {
+                        padding: 13px 14px;
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+                        border: 1px solid rgba(0, 0, 0, 0.666);
+                        border-radius: 5px;
+
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                        }
+
+                        .text {
+                            h4 {
+                                font-size: 16px;
+                                font-weight: 500;
+                                user-select: none;
+                            }
+
+                            p {
+                                user-select: none;
+                                font-size: 12px;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .other_items {
+            margin-top: 100px;
+
+            .section_title {
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .block {
+                    width: 20px;
+                    height: 40px;
+                    border-radius: 4px;
+                    background: rgb(219, 68, 68);
+                }
+
+                h2 {
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: rgb(219, 68, 68);
+                }
+            }
+
+
+            .content_for {
+
+                .main_item {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    overflow-x: auto;
+
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+
+                    .item_card {
+                        margin: 2px 3px;
+                        padding: 20px 34px;
+                        width: 270px;
+                        height: 300px;
+                        // border: 1px solid rgba(0, 0, 0, 0.54);
+                        border-radius: 7px;
+                        transition: box-shadow 0.3s ease;
+                        position: relative;
+                        z-index: 1;
+
+                        &:hover {
+                            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+
+                            button {
+                                opacity: 1;
+                            }
+                        }
+
+                        .item_img {
+                            img {
+                                width: 190px;
+                                height: 170px;
+                                object-fit: cover;
+                            }
+                        }
+
+                        .item_text {
+                            margin: 10px 0;
+
+                            h3 {
+                                margin-bottom: 4px;
+                            }
+                        }
+
+                        button {
+                            position: absolute;
+                            bottom: 0px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            opacity: 0;
+                            transition: opacity 0.3s ease;
+                            padding: 10px 20px;
+                            background-color: black;
+                            color: white;
+                            border: none;
+                            border-radius: 4px;
+                            cursor: pointer;
+                            width: 100%;
+
+                            &:hover {
+                                background-color: rgba(0, 0, 0, 0.76);
+                            }
+                        }
+                    }
+
+
+
+
+                    .if_data_none {
+                        overflow-x: auto;
+
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
+
+                        display: flex;
+                        align-items: center;
+                        gap: 25px;
+
+                        .pagin_block {
+                            border-radius: 10px;
+                            width: 250px;
+                            height: 290px;
+                            background: rgba(0, 0, 0, 0.137);
+                            animation: pulse 1.5s infinite;
+                        }
+                    }
+
+
+                    @keyframes pulse {
+                        0% {
+                            transform: scale(1);
+                            opacity: 0.8;
+                        }
+
+                        50% {
+                            transform: scale(1.02);
+                            opacity: 1;
+                        }
+
+                        100% {
+                            transform: scale(1);
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media(max-width: 764px) {
+    .ItemDetails {
+        .content {
+            margin-top: 80px;
+
+            .item_det_content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 40px;
+
+                img {
+                    width: 310px;
+                    height: 270px;
+                    object-fit: cover;
+                }
+
+                .item_det_text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+
+                    h1 {
+                        font-size: 25px;
+                        font-weight: 600;
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    }
+
+                    span {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: rgb(0, 255, 102);
+                    }
+
+                    h3 {
+                        font-size: 24px;
+                        font-weight: 400;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: rgba(0, 0, 0, 0.96);
+                    }
+
+                    .item_color {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        h3 {
+                            font-size: 20px;
+                            font-weight: 400;
+                        }
+
+                        p {
+                            font-size: 18px;
+                            font-weight: 400;
+                            color: rgba(0, 0, 0, 0.684);
+                        }
+                    }
+
+                    .item_size {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        h3 {
+                            font-size: 20px;
+                            font-weight: 400;
+                        }
+
+                        p {
+                            margin-top: 2px;
+                            font-size: 18px;
+                            font-weight: 400;
+                            color: rgba(0, 0, 0, 0.684);
+                        }
+
+                    }
+
+                    .item_buy_block {
+                        display: flex;
+                        align-items: center;
+
+                        .item_count {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

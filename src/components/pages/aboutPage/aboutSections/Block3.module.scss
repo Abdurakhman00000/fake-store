@@ -1,0 +1,366 @@
+.Block3 {
+    margin-top: 100px;
+
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .block {
+
+            .block_img {
+                background-image: url('/assets/shopman1.png');
+                width: 330px;
+                height: 400px;
+            }
+
+            .block_text {
+
+                h2 {
+                    font-size: 32px;
+                    font-weight: 500;
+                    margin-top: 16px;
+                }
+
+                p {
+                    font-size: 16px;
+                    font-weight: 400;
+                    margin-top: 4px;
+                }
+
+                .logos {
+                    margin-top: 14px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+
+        .block2 {
+
+            .block_img {
+                background-image: url('/assets/shopman2.png');
+                width: 330px;
+                height: 400px;
+            }
+
+            .block_text {
+
+                h2 {
+                    font-size: 32px;
+                    font-weight: 500;
+                    margin-top: 16px;
+                }
+
+                p {
+                    font-size: 16px;
+                    font-weight: 400;
+                    margin-top: 4px;
+                }
+
+                .logos {
+                    margin-top: 14px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+
+        .block3 {
+
+            .block_img {
+                background-image: url('/assets/shopman3.png');
+                width: 330px;
+                height: 400px;
+            }
+
+            .block_text {
+
+                h2 {
+                    font-size: 32px;
+                    font-weight: 500;
+                    margin-top: 16px;
+                }
+
+                p {
+                    font-size: 16px;
+                    font-weight: 400;
+                    margin-top: 4px;
+                }
+
+                .logos {
+                    margin-top: 14px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media(max-width: 769px) {
+    .Block3 {
+        margin-top: 100px;
+    
+        .content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+
+            overflow-x: auto;
+    
+            .block {
+    
+                .block_img {
+                    background-image: url('/assets/shopman1.png');
+                    width: 330px;
+                    height: 400px;
+                }
+    
+                .block_text {
+    
+                    h2 {
+                        font-size: 32px;
+                        font-weight: 500;
+                        margin-top: 16px;
+                    }
+    
+                    p {
+                        font-size: 16px;
+                        font-weight: 400;
+                        margin-top: 4px;
+                    }
+    
+                    .logos {
+                        margin-top: 14px;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+    
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+    
+            .block2 {
+    
+                .block_img {
+                    background-image: url('/assets/shopman2.png');
+                    width: 330px;
+                    height: 400px;
+                }
+    
+                .block_text {
+    
+                    h2 {
+                        font-size: 32px;
+                        font-weight: 500;
+                        margin-top: 16px;
+                    }
+    
+                    p {
+                        font-size: 16px;
+                        font-weight: 400;
+                        margin-top: 4px;
+                    }
+    
+                    .logos {
+                        margin-top: 14px;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+    
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+    
+            .block3 {
+    
+                .block_img {
+                    background-image: url('/assets/shopman3.png');
+                    width: 330px;
+                    height: 400px;
+                }
+    
+                .block_text {
+    
+                    h2 {
+                        font-size: 32px;
+                        font-weight: 500;
+                        margin-top: 16px;
+                    }
+    
+                    p {
+                        font-size: 16px;
+                        font-weight: 400;
+                        margin-top: 4px;
+                    }
+    
+                    .logos {
+                        margin-top: 14px;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+    
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media(max-width: 330px) {
+    .Block3 {
+        margin-top: 100px;
+    
+        .content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+
+            overflow-x: auto;
+    
+            .block {
+    
+                .block_img {
+                    background-image: url('/assets/shopman1.png');
+                    width: 280px;
+                    height: 370px;
+                }
+    
+                .block_text {
+    
+                    h2 {
+                        font-size: 29px;
+                        font-weight: 500;
+                        margin-top: 16px;
+                    }
+    
+                    p {
+                        font-size: 16px;
+                        font-weight: 400;
+                        margin-top: 4px;
+                    }
+    
+                    .logos {
+                        margin-top: 14px;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+    
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+    
+            .block2 {
+    
+                .block_img {
+                    background-image: url('/assets/shopman2.png');
+                    width: 280px;
+                    height: 370px;
+                }
+    
+                .block_text {
+    
+                    h2 {
+                        font-size: 29px;
+                        font-weight: 500;
+                        margin-top: 16px;
+                    }
+    
+                    p {
+                        font-size: 16px;
+                        font-weight: 400;
+                        margin-top: 4px;
+                    }
+    
+                    .logos {
+                        margin-top: 14px;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+    
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+    
+            .block3 {
+    
+                .block_img {
+                    background-image: url('/assets/shopman3.png');
+                    width: 280px;
+                    height: 370px;
+                }
+    
+                .block_text {
+    
+                    h2 {
+                        font-size: 29px;
+                        font-weight: 500;
+                        margin-top: 16px;
+                    }
+    
+                    p {
+                        font-size: 16px;
+                        font-weight: 400;
+                        margin-top: 4px;
+                    }
+    
+                    .logos {
+                        margin-top: 14px;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+    
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

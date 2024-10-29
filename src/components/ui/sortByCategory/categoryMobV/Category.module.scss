@@ -1,0 +1,47 @@
+.CategoryBy {
+    .content {
+        width: 100%;
+        padding: 40px 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .back {
+
+            .back_btn {
+                width: 53px;
+                height: 53px;
+                background: rgba(0, 0, 0, 0.119);
+                border-radius: 50%;
+                border: none;
+                margin-bottom: 20px;
+
+                svg {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+
+        h1 {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-bottom: 20px;
+            user-select: none;
+        }
+
+        a {
+            user-select: none;
+            font-size: 16px;
+            font-weight: 400;
+            cursor: pointer;
+            padding: 5px 4px;
+            background-color: transparent;
+            transition: background-color 0.1s linear;
+            border-radius: 3px;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.13);
+            }
+        }
+    }
+}

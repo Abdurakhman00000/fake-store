@@ -1,0 +1,234 @@
+.toast-custom {
+    background-color: black !important;
+    color: white !important;
+}
+
+.toast-custom.toastify-success {
+    background-color: rgb(219, 68, 68) !important;
+}
+
+.SignUp {
+    margin-top: 200px;
+ 
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .auth_img {
+            background-image: url('/assets/auth img.png');
+            width: 680px;
+            height: 670px;
+            object-fit: cover;
+        }
+
+        .auth_form {
+            display: flex;
+            flex-direction: column;
+
+            h1 {
+                font-size: 36px;
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 400;
+                margin-bottom: 10px;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+
+                input {
+                    width: 370px;
+                    height: 40px;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    border-bottom: 2px solid rgba(0, 0, 0, 0.352);
+                    font-size: 16px;
+                    font-weight: 400;
+                    margin-top: 25px;
+                    color: rgba(0, 0, 0, 0.592);
+                }
+
+                .showPasswordButton {
+                    position: absolute;
+                    margin-left: 330px;
+                    margin-top: -34px;
+                    background: transparent;
+                    border: none;
+
+                        svg {
+                            width: 25px;
+                            height: 25px;
+                            color: rgba(0, 0, 0, 0.592);
+                            // margin-left: -6px;
+                        }
+                }
+
+                button {
+                    margin-top: 35px;
+                    margin-bottom: 15px;
+                    width: 370px;
+                    height: 46px;
+                    border-radius: 4px;
+                    background: rgb(219, 68, 68);
+                    border: none;
+                    color: white;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+
+            }
+
+
+            button {
+                width: 370px;
+                height: 46px;
+                border-radius: 4px;
+                background: transparent;
+                border: none;
+                color: black;
+                font-size: 16px;
+                font-weight: 500;
+                border: 1px solid rgba(0, 0, 0, 0.603);
+            }
+
+            h6 {
+                margin-top: 20px;
+                font-size: 14px;
+                color: rgba(0, 0, 0, 0.664);
+                font-weight: 400;
+
+                span {
+                    color: black;
+                    text-decoration: underline;
+                }
+            }
+
+        }
+    }
+}
+
+
+@media(max-width: 769px) {
+    .SignUp {
+
+        margin-top: 40px;
+
+        .content {
+            display: flex;
+            justify-content: center;
+            .auth_img {
+                display: none;
+            }
+
+            .auth_form {
+                
+
+                form {
+                    input {
+                        width: 100%;
+                    }
+
+                    button {
+                        width: 100%;
+                    }
+                }
+
+                button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media(max-width: 450px) {
+    .SignUp {
+
+        margin-top: 40px;
+
+        .content {
+            display: flex;
+            justify-content: center;
+            .auth_img {
+                display: none;
+            }
+
+            .auth_form {
+                
+
+                form {
+                    input {
+                        width: 100%;
+                    }
+
+                    button {
+                        width: 100%;
+                    }
+
+                    .showPasswordButton {
+                        margin-left: 250px;
+                    }
+                }
+
+                button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media(max-width: 350px) {
+    .SignUp {
+
+        margin-top: 40px;
+
+        .content {
+            display: flex;
+            justify-content: center;
+            .auth_img {
+                display: none;
+            }
+
+            .auth_form {
+                h1 {
+                    font-size: 29px;
+                }
+
+                form {
+                    input {
+                        width: 100%;
+                    }
+
+                    button {
+                        width: 100%;
+                    }
+
+                    .showPasswordButton {
+                        margin-left: 195px;
+                    }
+                }
+
+                button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+

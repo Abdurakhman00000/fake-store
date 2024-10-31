@@ -26,14 +26,12 @@ const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Устанавливаем начальное значение isMobile на клиентской стороне
-    setIsMobile(window.innerWidth <= 768);
-
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+      const handleResize = () => {
+        setIsMobile(window.innerWidth <= 768);
+      };
+      window.addEventListener("resize", handleResize);
+      handleResize(); 
+      return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const scrollToTop = () => {
@@ -180,9 +178,7 @@ const Header = () => {
                         alt=""
                       />
                     )
-                  ) : (
-                    <div></div>
-                  )}
+                  ) : null}
                 </div>
               </div>
             </div>

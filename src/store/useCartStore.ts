@@ -23,7 +23,12 @@ const useCartStore = create<CartState>((set, get) => {
   const loadCartFromStorage = (): CartItem[] => {
     if (typeof window !== "undefined") {
       const cart = localStorage.getItem("fake-cart");
-      return cart ? JSON.parse(cart) : [];
+      try {
+        return cart ? JSON.parse(cart) : [];
+      } catch (error) {
+        console.error("Error parsing cart from storage", error);
+        return []; 
+      }
     }
     return [];
   };
@@ -42,19 +47,14 @@ const useCartStore = create<CartState>((set, get) => {
     addToCart: (item: CartItem) => {
       set((state) => {
         const existingItem = state.cart.find((cartItem) => cartItem.id === item.id);
+        const updatedCart = existingItem
+          ? state.cart.map((cartItem) =>
+              cartItem.id === item.id
+                ? { ...cartItem, quantity: cartItem.quantity + 1 }
+                : cartItem
+            )
+          : [...state.cart, { ...item, quantity: 1 }];
 
-        if (existingItem) {
-          const updatedCart = state.cart.map((cartItem) =>
-            cartItem.id === item.id
-              ? { ...cartItem, quantity: cartItem.quantity + 1 }
-              : cartItem
-          );
-          saveCartToStorage(updatedCart);
-          return { cart: updatedCart };
-        }
-
-        const newItem = { ...item, quantity: 1 };
-        const updatedCart = [...state.cart, newItem];
         saveCartToStorage(updatedCart);
         return { cart: updatedCart };
       });

@@ -20,7 +20,12 @@ interface FavoriteStore {
 const loadFavoritesFromLocalStorage = (): FavoriteItem[] => {
   if (typeof window !== "undefined") {
     const storedFavorites = localStorage.getItem("favorites");
-    return storedFavorites ? JSON.parse(storedFavorites) : [];
+    try {
+      return storedFavorites ? JSON.parse(storedFavorites) : [];
+    } catch (error) {
+      console.error("Error parsing favorites from localStorage", error);
+      return []; 
+    }
   }
   return [];
 };
@@ -29,6 +34,9 @@ export const useFavoriteStore = create<FavoriteStore>((set) => ({
   favorites: loadFavoritesFromLocalStorage(),
 
   addFavorite: (item) => set((state) => {
+    const existingItem = state.favorites.find((favItem) => favItem.id === item.id);
+    if (existingItem) return state; 
+
     const updatedFavorites = [...state.favorites, item];
     localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
     return { favorites: updatedFavorites };
@@ -45,7 +53,7 @@ export const useFavoriteStore = create<FavoriteStore>((set) => ({
     const updatedFavorites = isFavorite
       ? state.favorites.filter((favItem) => favItem.id !== item.id)
       : [...state.favorites, item];
-      
+    
     localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
     return { favorites: updatedFavorites };
   }),

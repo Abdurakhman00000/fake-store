@@ -8,22 +8,22 @@ import Link from "next/link";
 
 const Favorite = () => {
   const { favorites, removeFavorite } = useFavoriteStore();
+  const [isLoading, setIsLoading] = useState(true);
 
-  const [isLoadinger, setIsLoadinger] = useState(true);
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoadinger(false);
+      setIsLoading(false);
     }, 1000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [favorites]); 
 
-  if (isLoadinger) {
-    return (
-      <>
-        <Loader />
-      </>
-    );
+  if (isLoading) {
+    return <Loader />;
+  }
+
+  if (favorites.length === 0) {
+    return <p>Нет избранных товаров.</p>;
   }
 
   const truncateText = (text: string, maxLength: number) => {
@@ -36,23 +36,19 @@ const Favorite = () => {
       <div className="container">
         <div className={scss.content}>
           <h3>Избранные</h3>
-          {favorites.length === 0 ? (
-            <p className={scss.non_favorite}>Нет избранных товаров.</p>
-          ) : (
-            <div className={scss.main_item}>
-              {favorites.map((item) => (
-                <div key={item.id} className={scss.item}>
-                  <Link href={`/item-details/${item.id}`}>
-                    <img src={item.image} alt="" />
-                  </Link>
-                  <h4>{truncateText(item.title, 11)}</h4>
-                  <button onClick={() => removeFavorite(item.id)}>
-                    Убрать
-                  </button>
-                </div>
-              ))}
-            </div>
-          )}
+          <div className={scss.main_item}>
+            {favorites.map((item) => (
+              <div key={item.id} className={scss.item}>
+                <Link href={`/item-details/${item.id}`}>
+                  <img src={item.image} alt="" />
+                </Link>
+                <h4>{truncateText(item.title, 11)}</h4>
+                <button onClick={() => removeFavorite(item.id)}>
+                  Убрать
+                </button>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

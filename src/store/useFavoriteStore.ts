@@ -19,7 +19,7 @@ interface FavoriteStore {
 
 const loadFavoritesFromLocalStorage = (): FavoriteItem[] => {
   if (typeof window !== "undefined") {
-    const storedFavorites = localStorage.getItem("favorites");
+    const storedFavorites = localStorage.getItem("favorites"); 
     try {
       return storedFavorites ? JSON.parse(storedFavorites) : [];
     } catch (error) {

@@ -8,7 +8,7 @@ export const GET = async () => {
         const data = await prisma.caitem.findMany();
         return NextResponse.json(data);
     } catch (error) {
-        console.error("Error fetching data:", error); 
+        console.error("Error data:", error); 
         return NextResponse.json({ message: "Internal Server Error" }, { status: 500 });
     } finally {
         await prisma.$disconnect(); 

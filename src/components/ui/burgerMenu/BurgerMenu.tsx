@@ -14,6 +14,14 @@ const BurgerMenu: React.FC = () => {
     setIsOpen(!isOpen);
   };
 
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       <div
@@ -28,45 +36,45 @@ const BurgerMenu: React.FC = () => {
         <ul>
           <li>
             <Link href="/trade">
-              <p>Trade in</p>
+              <p onClick={scrollToTop}>Trade in</p>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <p>Home</p>
+              <p onClick={scrollToTop}>Home</p>
             </Link>
           </li>
           <li>
             <Link href="/contact">
-              <p>Contact</p>
+              <p onClick={scrollToTop}>Contact</p>
             </Link>
           </li>
           <li>
             <Link href="/about">
-              <p>About</p>
+              <p onClick={scrollToTop}>About</p>
             </Link>
           </li>
           {isAuthenticated ? (
             <li>
               <Link href="/auth/user-profile">
-                <p>Account</p>
+                <p onClick={scrollToTop}>Account</p>
               </Link>
             </li>
           ) : (
             <li>
               <Link href="/auth/sign-up">
-                <p>Sign Up</p>
+                <p onClick={scrollToTop}>Sign Up</p>
               </Link>
             </li>
           )}
           <li>
             <Link href="/favorite">
-              <p>Favorite</p>
+              <p onClick={scrollToTop}>Favorite</p>
             </Link>
           </li>
           <li>
             <Link href="/cart">
-              <p>Cart</p>
+              <p onClick={scrollToTop}>Cart</p>
             </Link>
           </li>
         </ul>

@@ -23,9 +23,12 @@ const Header = () => {
 
   const isAuthenticated = !!user && !isError;
   const pathname = usePathname();
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Устанавливаем начальное значение isMobile на клиентской стороне
+    setIsMobile(window.innerWidth <= 768);
+
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
@@ -117,8 +120,8 @@ const Header = () => {
 
               <div className={scss.header_active}>
                 <div className={scss.category_mob}>
-                  <Link href='/category-page'>
-                  <BiCategory />
+                  <Link href="/category-page">
+                    <BiCategory />
                   </Link>
                 </div>
                 <InputSearch />

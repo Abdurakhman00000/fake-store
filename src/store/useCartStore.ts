@@ -21,12 +21,17 @@ export interface CartState {
 
 const useCartStore = create<CartState>((set, get) => {
   const loadCartFromStorage = (): CartItem[] => {
-    const cart = localStorage.getItem("fake-cart");
-    return cart ? JSON.parse(cart) : [];
+    if (typeof window !== "undefined") {
+      const cart = localStorage.getItem("fake-cart");
+      return cart ? JSON.parse(cart) : [];
+    }
+    return [];
   };
 
   const saveCartToStorage = (cart: CartItem[]) => {
-    localStorage.setItem("fake-cart", JSON.stringify(cart));
+    if (typeof window !== "undefined") {
+      localStorage.setItem("fake-cart", JSON.stringify(cart));
+    }
   };
 
   const initialCart = loadCartFromStorage();
@@ -64,7 +69,9 @@ const useCartStore = create<CartState>((set, get) => {
     },
 
     clearCart: () => {
-      localStorage.removeItem("fake-cart");
+      if (typeof window !== "undefined") {
+        localStorage.removeItem("fake-cart");
+      }
       set({ cart: [] });
     },
 

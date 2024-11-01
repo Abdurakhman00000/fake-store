@@ -96,7 +96,7 @@ const ItemDetailsForCat = () => {
   return (
     <section className={scss.ItemDetails}>
       <div className="container">
-        <div className={scss.content}> 
+        <div className={scss.content}>
           <div className={scss.item_det_content}>
             <Zoom>
               <img src={itemDet?.image} alt="" />
@@ -127,28 +127,28 @@ const ItemDetailsForCat = () => {
                   <button onClick={increment}>+</button>
                 </div>
                 <div className={scss.item_buy_btn}>
-                  <button>Buy Now</button>
+                  <Link href="/users-order">
+                    <button onClick={scrollToTop}>Buy Now</button>
+                  </Link>
                 </div>
               </div>
 
               <div className={scss.main_delivery}>
-              <div className={scss.box}>
-                <FaTruckFast/>
-                <div className={scss.text}>
-                  <h4>Free Delivery</h4>
-                  <p>Enter your postal code for Delivery Availability</p>
+                <div className={scss.box}>
+                  <FaTruckFast />
+                  <div className={scss.text}>
+                    <h4>Free Delivery</h4>
+                    <p>Enter your postal code for Delivery Availability</p>
+                  </div>
+                </div>
+                <div className={scss.box}>
+                  <RiLoopLeftFill />
+                  <div className={scss.text}>
+                    <h4>Return Delivery</h4>
+                    <p>Free 30 Days Delivery Returns. Details</p>
+                  </div>
                 </div>
               </div>
-              <div className={scss.box}>
-                <RiLoopLeftFill/>
-                <div className={scss.text}>
-                  <h4>Return Delivery</h4>
-                  <p>Free 30 Days Delivery Returns. Details</p>
-                </div>
-              </div>
-              </div>
-              
-
             </div>
           </div>
 

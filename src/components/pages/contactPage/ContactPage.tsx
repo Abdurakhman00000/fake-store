@@ -78,7 +78,7 @@ const ContactPage = () => {
                 <p>Emails: support@exclusive.com</p>
               </div>
             </div>
-          </div>
+          </div> 
 
           <form onSubmit={handleSubmit(onSumbit)} className={scss.content_block2}>
             <div className={scss.min_inputs}>

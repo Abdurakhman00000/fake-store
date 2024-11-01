@@ -74,7 +74,7 @@ const SignIn = () => {
         <div className={scss.content}>
           <div className={scss.auth_img}></div>
           <div className={scss.auth_form}>
-            <h1>Log in to Exclusive</h1>
+            <h1>Log in to AShop</h1>
             <p>Enter your details below</p>
 
             <form onSubmit={handleSubmit(onSubmit)}>

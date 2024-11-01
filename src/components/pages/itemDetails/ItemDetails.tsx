@@ -12,7 +12,8 @@ import Link from "next/link";
 import { FaTruckFast } from "react-icons/fa6";
 import { RiLoopLeftFill } from "react-icons/ri";
 import Loader from "@/components/ui/loader/Loader";
-
+import { useFavoriteStore } from "@/store/useFavoriteStore";
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
 interface IProductFromApi {
@@ -51,6 +52,11 @@ const ItemDetails = () => {
     return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
   };
 
+  //! favorite
+  const { favorites, toggleFavorite } = useFavoriteStore();
+  const isFavorite = (id: number) => favorites.some((data) => data.id === id);
+  //! favorite
+
   const handleAddToCart = (item: IProductFromApi) => {
     const itemWith: CartItem = {
       id: item.id,
@@ -71,7 +77,7 @@ const ItemDetails = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", 
+      behavior: "smooth",
     });
   };
 
@@ -95,7 +101,7 @@ const ItemDetails = () => {
   return (
     <section className={scss.ItemDetails}>
       <div className="container">
-        <div className={scss.content}> 
+        <div className={scss.content}>
           <div className={scss.item_det_content}>
             <Zoom>
               <img src={itemDet?.image} alt="" />
@@ -126,28 +132,28 @@ const ItemDetails = () => {
                   <button onClick={increment}>+</button>
                 </div>
                 <div className={scss.item_buy_btn}>
-                  <button>Buy Now</button>
+                  <Link href='/users-order'>
+                  <button onClick={scrollToTop}>Buy Now</button>
+                  </Link>
                 </div>
               </div>
 
               <div className={scss.main_delivery}>
-              <div className={scss.box}>
-                <FaTruckFast/>
-                <div className={scss.text}>
-                  <h4>Free Delivery</h4>
-                  <p>Enter your postal code for Delivery Availability</p>
+                <div className={scss.box}>
+                  <FaTruckFast />
+                  <div className={scss.text}>
+                    <h4>Free Delivery</h4>
+                    <p>Enter your postal code for Delivery Availability</p>
+                  </div>
+                </div>
+                <div className={scss.box}>
+                  <RiLoopLeftFill />
+                  <div className={scss.text}>
+                    <h4>Return Delivery</h4>
+                    <p>Free 30 Days Delivery Returns. Details</p>
+                  </div>
                 </div>
               </div>
-              <div className={scss.box}>
-                <RiLoopLeftFill/>
-                <div className={scss.text}>
-                  <h4>Return Delivery</h4>
-                  <p>Free 30 Days Delivery Returns. Details</p>
-                </div>
-              </div>
-              </div>
-              
-
             </div>
           </div>
 
@@ -166,6 +172,33 @@ const ItemDetails = () => {
                     .map((item) => (
                       <div key={item.id} className={scss.item_card}>
                         <Link href={`/item-details/${item.id}`}>
+                          <div className={scss.favorite_button}>
+                            <p
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                toggleFavorite(item);
+                              }}
+                            >
+                              {isFavorite(item.id) ? (
+                                <>
+                                  {" "}
+                                  <FavoriteIcon
+                                    sx={{ color: "red", marginLeft: "-40px" }}
+                                  />{" "}
+                                </>
+                              ) : (
+                                <>
+                                  {" "}
+                                  <FavoriteIcon
+                                    sx={{
+                                      color: "rgba(0, 0, 0, 0.229)",
+                                      marginLeft: "-40px",
+                                    }}
+                                  />{" "}
+                                </>
+                              )}
+                            </p>
+                          </div>
                           <div onClick={scrollToTop} className={scss.item_img}>
                             {item.image ? (
                               <img src={item.image} alt="" />

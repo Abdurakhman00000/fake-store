@@ -6,6 +6,7 @@ import useCartStore from "@/store/useCartStore";
 import Header from "@/components/layout/header/Header";
 import { CiCircleRemove } from "react-icons/ci";
 import Loader from "../loader/Loader";
+import Link from "next/link";
 
 const Cart = () => {
   const {
@@ -33,6 +34,13 @@ const Cart = () => {
   if (isLoading) {
     return <Loader />;
   }
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   if (cart.length === 0) {
     return (
@@ -104,7 +112,9 @@ const Cart = () => {
                   <p>{getTotalPrice()} сом</p>
                 </div>
 
-                <button>Перейти к оплате</button>
+                <Link href='/users-order'>
+                <button onClick={scrollToTop}>Перейти к оплате</button>
+                </Link>
               </div>
             </div>
           </div>

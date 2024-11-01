@@ -80,7 +80,7 @@ const SignUp = () => {
         <div className={scss.content}>
           <div className={scss.auth_img}></div>
           <div className={scss.auth_form}>
-            <h1>Create an account</h1>
+            <h1>Create account</h1>
             <p>Enter your details below</p>
             <form onSubmit={handleSubmit(onSumbit)}>
               <input

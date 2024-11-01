@@ -73,7 +73,7 @@ const useCartStore = create<CartState>((set, get) => {
         localStorage.removeItem("fake-cart");
       }
       set({ cart: [] });
-    },
+    }, 
 
     increaseQuantity: (id: number) => {
       set((state) => {

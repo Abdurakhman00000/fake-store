@@ -65,7 +65,7 @@ const Cart = () => {
         <div className={scss.content}>
           <h2>Корзина</h2>
           <div className={scss.main_cart}>
-            {cart.reverse().map((item) => (
+            {cart.map((item) => (
               <div className={scss.cart_block} key={item.id}>
                 <div className={scss.block1}>
                   <img src={item.image} alt={item.title} />

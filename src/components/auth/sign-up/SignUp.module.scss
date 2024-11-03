@@ -128,6 +128,7 @@
             }
 
             .auth_form {
+                width: 100%;
                 
 
                 form {
@@ -164,6 +165,7 @@
             }
 
             .auth_form {
+                width: 100%;
                 
 
                 form {
@@ -176,7 +178,7 @@
                     }
 
                     .showPasswordButton {
-                        margin-left: 250px;
+                        margin-left: 300px;
                     }
                 }
 
@@ -187,6 +189,52 @@
         }
     }
 }
+
+
+
+@media(max-width: 390px) {
+    .SignUp {
+
+        margin-top: 40px;
+
+        .content {
+            display: flex;
+            justify-content: center;
+            .auth_img {
+                display: none;
+            }
+
+            .auth_form {
+                width: 100%;
+                h1 {
+                    font-size: 29px;
+                }
+
+                form {
+                    input {
+                        width: 100%;
+                    }
+
+                    button {
+                        width: 100%;
+                    }
+
+                    .showPasswordButton {
+                        margin-left: 290px;
+                    }
+                }
+
+                button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+
+
 
 
 
@@ -204,6 +252,7 @@
             }
 
             .auth_form {
+                width: 100%;
                 h1 {
                     font-size: 29px;
                 }
@@ -218,7 +267,7 @@
                     }
 
                     .showPasswordButton {
-                        margin-left: 195px;
+                        margin-left: 250px;
                     }
                 }
 

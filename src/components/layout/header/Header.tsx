@@ -106,6 +106,7 @@ const Header = () => {
                                 : `${scss.link}`
                             }
                             href={item.link}
+                            onClick={scrollToTop}
                           >
                             {item.name}
                           </Link>

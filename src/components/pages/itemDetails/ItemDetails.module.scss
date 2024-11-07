@@ -211,6 +211,13 @@
                             }
                         }
 
+                        .favorite_button {
+                            position: absolute;
+                            z-index: 999;
+                            top: 15;
+                            right: 0;
+                        }
+
                         .item_img {
                             img {
                                 width: 190px;

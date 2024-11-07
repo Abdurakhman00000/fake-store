@@ -187,7 +187,7 @@ const ItemDetails = () => {
                                   />{" "}
                                 </>
                               ) : (
-                                <>
+                                <> 
                                   {" "}
                                   <FavoriteIcon
                                     sx={{

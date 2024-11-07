@@ -36,8 +36,7 @@ const Results = () => {
       setTimeout(() => {
         const combinedData = [...(productsData || []), ...(otherData || [])];
         const filtered = combinedData.filter((item) =>
-          item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          item.category.toLowerCase().includes(searchTerm.toLowerCase())
+          item.title.toLowerCase().includes(searchTerm.toLowerCase())
         );
 
         setFilteredProducts(filtered);

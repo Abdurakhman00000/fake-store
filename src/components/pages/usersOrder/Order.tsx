@@ -139,7 +139,6 @@ const Order = () => {
       </div>
 
 
-      {/* Модальное окно */}
       {isModalOpen && (
         <div className={scss.modalOverlay} onClick={closeModal}>
           <div className={scss.modalContent}>

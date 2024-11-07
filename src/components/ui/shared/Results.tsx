@@ -99,7 +99,7 @@ const Results = () => {
                     </Link>
 
                     <div className={scss.item_text}>
-                      <h3>{truncateText(item.title, 16)}</h3>
+                      <h3>{truncateText(item.title, 9)}</h3>
                       <p>{item.price} сом</p>
                     </div>
 

@@ -6,7 +6,7 @@ const apiAuth = index.injectEndpoints({
       query: () => ({
         url: `/auth/user`,
         method: "GET",
-      }),
+      }), 
       providesTags: ["user"],
     }),
 

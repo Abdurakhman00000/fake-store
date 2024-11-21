@@ -75,7 +75,7 @@ const Section1 = () => {
           <div className={scss.main_item}>
             {Array.isArray(data) ? (
               data.map((item) => (
-                <div key={item.id} className={scss.item_card}>
+                <div key={item?.id} className={scss.item_card}>
                   <div className={scss.favorite_button}>
                     <p
                       onClick={(e) => {
@@ -89,7 +89,7 @@ const Section1 = () => {
                   <Link href={`/item-details/${item.id}`} scroll={false}>
                     <div onClick={scrollToTop} className={scss.item_img}>
                       {item.image ? (
-                        <img src={item.image} alt={item.title} />
+                        <img src={item?.image} alt={item.title} />
                       ) : (
                         <img
                           src="https://www.its.ac.id/tmesin/wp-content/uploads/sites/22/2022/07/no-image.png"
